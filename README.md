@@ -1,8 +1,12 @@
 # JavaPregel
 
+*Project Members:*
+- Sai Prasad Kousika    
+- Ravi Shankar Karanam   
+- Ishwari Abhijit Patil  
 
 
-We have implemented Pregel framework and also implemented the solutions of PageRank and Dijkistra single-source distance problems on this pregel framework.
+We have implemented Pregel framework and also implemented the solutions of PageRank, Bipartite and Dijkistra single-source distance problems on this pregel framework.
 
 We have a class 'Vertex' to hold all the properties of vertex in our pregel graphs. It has 'Vertex_id' - unique id for each vertex, 'number_of_vertices' to track the count of vertices, boolean 'active' to represent the state of vertex, 'adjacent_vertices' to store the vertices to which this vertex is connected to, 'incoming_messages' to store the incoming messages from other vertices in previous superstep, 'outgoing_messages' to store the outgoing messages to sent to other vertices in next superstep, 'superstep' to keep a track of the present superstep iterator count.
 
@@ -23,3 +27,8 @@ Code flow :
 
 
 The Dijkistra single-source distance problem has the same flow as above, except that the update function to change the node values at each superstep is changed accordingly.
+
+
+
+Any queries in code:
+mailto:saiprasad@cse.iitb.ac.in
