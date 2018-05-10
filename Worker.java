@@ -72,10 +72,11 @@ public class Worker extends Thread{
 	
 	public void run() {
 		queue.clear();
+
 		while(halt==false) {
-			//System.out.println("Running"+worker_id+" "+thread_completed);
+			System.out.println("Running "+worker_id +" step "+thread_completed);
 			if (thread_completed==1) {
-				
+				System.out.println(worker_id+ "In Thread 1");
 				Message msg;
 				while ((msg = queue.poll()) != null) {
 						for(int i=0;i<vertices.size();i++) {
@@ -89,7 +90,6 @@ public class Worker extends Thread{
 				//System.out.println("Queue size after "+worker_id+ " - "+queue.size());
 				
 				for(int i=0;i<vertices.size();i++) {
-					vertices.get(i).superstep+=1;
 					vertices.get(i).update();
 				}
 				
@@ -100,6 +100,7 @@ public class Worker extends Thread{
 			
 			else if (thread_completed==3) {
 				Message msg;
+				System.out.println(worker_id+ "In Thread 3");
 				for(int i=0;i<vertices.size();i++) {
 					for(int j=0;j<vertices.get(i).outgoing_messages.size();j++) {
 						msg=vertices.get(i).outgoing_messages.get(j);

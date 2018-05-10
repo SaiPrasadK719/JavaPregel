@@ -59,7 +59,11 @@ public class Pregel {
 		
 		
 		for(int i=0;i<no_of_workers;i++) {
-				while(workers.get(i).isDone()==false);
+			
+			for(int j=0; j < 1000; j++);
+			while(workers.get(i).isDone()==false) {
+				System.out.println("Worker"+i+ " Thread A "+workers.get(i).thread_completed);
+			}
 				System.out.println("Process "+i+" completed");
     	}
 		
@@ -75,7 +79,10 @@ public class Pregel {
 		System.out.println("All transfers started");
 		
 		for(int i=0;i<no_of_workers;i++) {
-				while(workers.get(i).isTransferCompleted()==false);				
+			
+				while(workers.get(i).isTransferCompleted()==false) {
+					System.out.println("Worker"+i+ " Thread B "+workers.get(i).thread_completed);
+				}
 				System.out.println("Transfer "+i+" completed");
     	}
 		System.out.println("\n");

@@ -51,6 +51,7 @@ public class Distance {
 	public static void distance_pregel(List<Vertex> vertices){
 		Pregel pregel_object = new Pregel(vertices,workers);
 		pregel_object.run();
+		System.out.println("\n--------------\n");
 		pregel_object.display();
 	}	
 }	
@@ -79,7 +80,7 @@ class distanceVertex extends Vertex{
 				Message m=new Message(this.vertex_id,adjacent_vertices.get(i).vertex_id,this.value);
 				this.outgoing_messages.add(m);
 			}
-			
+			this.superstep++;
 		}
 		else {
 			this.active=false;

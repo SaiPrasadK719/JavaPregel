@@ -32,15 +32,4 @@ public class Message {
     	this.double_value=-1;
     	this.str_value=value;
     }
-    @SuppressWarnings("unused")
-	private void Print() {
-    	//System.out.println("Source " + this.source_id);
-    	//System.out.println("Destination " + this.destination_id);
-    	//System.out.println("Value Type " + this.value_type);
-    	//if (this.value_type.equalsIgnoreCase("Double"))
-    	//System.out.println("Value " + this.double_value);
-    	//else
-    	//System.out.println("Value " + this.str_value);
-    	System.out.println("From " + this.source_id +" To "+this.destination_id+ " value "+this.double_value);
-    }
 }

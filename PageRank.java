@@ -41,6 +41,7 @@ public class PageRank {
 		
 		Pregel pregel_object = new Pregel(vertices, workers);
 		pregel_object.run();
+		System.out.println("\n--------------\n");
 		pregel_object.display();
 		
 	}	
@@ -76,6 +77,7 @@ class PageRankVertex extends Vertex{
 					this.outgoing_messages.add(m);
 				}
 			}
+			this.superstep++;
 		}
 		else {
 			this.active=false;
