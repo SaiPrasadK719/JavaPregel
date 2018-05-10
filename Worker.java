@@ -110,7 +110,7 @@ public class Worker extends Thread{
 							worker_threads.get(msg_worker_id).queue.put(msg);
 						}
 						catch (Exception e) {
-							
+							System.out.println("Error in worker threads");
 						}
 						
 					}
