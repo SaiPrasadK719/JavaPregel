@@ -60,7 +60,6 @@ public class Pregel {
 		
 		for(int i=0;i<no_of_workers;i++) {
 			
-			for(int j=0; j < 1000; j++);
 			while(workers.get(i).isDone()==false) {
 				System.out.println("Worker"+i+ " Thread A "+workers.get(i).thread_completed);
 			}
